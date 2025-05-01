@@ -1,0 +1,9 @@
+/* You can reuse the same CSS as MathsQuiz.css. Just rename it for better organization */
+.quiz-card-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  /* Copy the same styles for .question-card, .answer-cards, etc. */
+  

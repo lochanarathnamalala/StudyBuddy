@@ -1,0 +1,392 @@
+/* General Styles for the Body and Page */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Cards container to center the quiz card */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* The quiz card container */
+.quiz-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  width: 2000px;
+  max-width: 5000px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Styling for the question card */
+.question-card {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Answer Cards */
+.answer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Styling for individual answer cards */
+.answer-card {
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  width: 40%;
+  max-width: 200px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  border: 2px solid transparent;
+}
+
+.answer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+}
+
+.answer-card.correct {
+  border: 2px solid green;
+  background-color: rgba(0, 128, 0, 0.3);
+}
+
+.answer-card.incorrect {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+/* Feedback text styling */
+.feedback {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Fade-in animation for result */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Button styling for the result page */
+.result-page button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #320361;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.result-page button:hover {
+  background-color: #068758;
+}
+
+  .cards {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease-in-out; /* Background transition */
+  }
+  
+
+  
+  .result-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .result-page h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .result-page p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .result-page button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #320361;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .result-page button:hover {
+    background-color: #068758;
+  }
+  
+  /* Slide transition for questions */
+  .quiz-card-container {
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Slide in and out animations */
+  .slide-in {
+    opacity: 1;
+  }
+  
+  .slide-out {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  
+  /* Answer Cards and Feedback Styling */
+  .answer-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    width: 40%;
+    max-width: 200px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    border: 2px solid transparent;
+  }
+  
+  .answer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+  }
+  
+  .answer-card.correct {
+    border: 2px solid green;
+    background-color: rgba(0, 128, 0, 0.3);
+  }
+  
+  .answer-card.incorrect {
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  
+  .feedback {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  /* Fade-in animation for result */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .galaxy-button {
+    padding: 16px 36px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(145deg, #320361, #068758);
+    border: 2px solid #d5e6e7;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 15px #7df9ff, 0 0 30px #42047e;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .galaxy-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #ffffff, 0 0 60px #00fff7;
+  }
+  
+  /* Quiz Card Layout */
+  .quiz-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    gap: 30px;
+  }
+  
+  /* Quiz Card Container */
+.quiz-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container takes full viewport height */
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    gap: 30px;
+    margin: 0; /* Remove margin to make sure it's centered */
+    padding: 0; /* Remove padding for alignment */
+  }
+  .cards {
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    height: 100vh;             /* Full height of the viewport */
+  }
+  
+  /* Question Card */
+  .question-card {
+  
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    font-size: 24px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto; /* Center the question card */
+  }
+  
+  /* Answer Cards Layout */
+  .answer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px; /* Add spacing between question and answers */
+  }
+  
+  /* Answer Card */
+  .answer-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    width: 40%;
+    max-width: 200px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    border: 2px solid transparent;
+    margin: 0 auto; /* Center each answer card */
+  }
+  
+  /* Hover effect for answer card */
+  .answer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+  }
+  
+  /* Correct Answer Styling */
+  .answer-card.correct {
+    border: 2px solid green;
+    background-color: rgba(0, 128, 0, 0.3);
+  }
+  
+  /* Incorrect Answer Styling */
+  .answer-card.incorrect {
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  
+  
+  .feedback {
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  /* Slide Animations */
+  .slide {
+    transition: all 0.5s ease;
+  }
+  
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-out {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .result-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .result-page h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .result-page p {
+    font-size: 24px;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  .result-page button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #320361;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .result-page button:hover {
+    background-color: #068758;
+  }
+  
