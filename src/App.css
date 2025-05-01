@@ -1,0 +1,156 @@
+body::before {
+  content: '';
+  position: fixed;
+  top: 10;
+  left: 20;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgb(22, 8, 97) 1px, transparent 1px),
+    radial-gradient(rgb(0, 29, 54) 1px, transparent 1px),
+    radial-gradient(rgb(10, 54, 108) 1px, transparent 1px);
+  background-size: 3px 3px, 4px 4px, 6px 6px;
+  background-position:
+    10 20,
+    50px 100px,
+    100px 200px;
+  animation: starMove 60s linear infinite;
+  z-index: 0;
+}
+.studybuddy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+.studybuddy span{
+  color: aqua;
+}
+
+.studybuddy-title {
+  white-space: nowrap; /* Prevent line break */
+  color: white;
+}
+
+.studybuddy-title span {
+  color: rgb(29, 135, 135);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding-left: 40px; /* Optional: spacing from title */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  cursor: pointer;
+  color: cyan;
+}
+
+
+
+
+@keyframes starMove {
+  from {
+    background-position: 0 0, 50px 100px, 100px 200px;
+  }
+  to {
+    background-position: -1000px 1000px, -500px 1500px, -800px 1200px;
+  }
+}
+.shooting-star {
+  position: fixed;
+  width: 80px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 0 6px white;
+  transform: rotate(45deg); /* Angled appearance */
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Star 1 */
+.shooting-star1 {
+  top: 10%;
+  left: -100px;
+  animation: shoot1 5s linear infinite;
+}
+
+/* Star 2 */
+.shooting-star2 {
+  top: 35%;
+  left: -100px;
+  animation: shoot2 7s linear infinite;
+}
+
+/* Star 3 */
+.shooting-star3 {
+  top: 65%;
+  left: -100px;
+  animation: shoot3 6s linear infinite;
+}
+
+/* Animations – diagonal motion (left to right and top to bottom) */
+@keyframes shoot1 {
+  0%   { top: 10%; left: -100px; opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { top: 30%; left: 110%; opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes shoot2 {
+  0%   { top: 35%; left: -100px; opacity: 0; }
+  20%  { opacity: 1; }
+  60%  { top: 55%; left: 110%; opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes shoot3 {
+  0%   { top: 65%; left: -100px; opacity: 0; }
+  30%  { opacity: 1; }
+  70%  { top: 85%; left: 110%; opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.maths-container {
+  position: absolute;
+  top: 50%;             /* Middle vertically */
+  left: 5%;             /* Shift left side */
+  transform: translateY(-50%);  /* Center vertically only */
+  z-index: 2;
+}
+
+.subject-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  z-index: 2;
+}
